@@ -33,6 +33,7 @@ LDFLAGS		+= -L$(OPENCM3_DIR)/lib
 
 DEFS		+= -I$(OPENCM3_DIR)/include
 DEFS		+= -I$(INC_DIR)
+DEFS		+= -I$(SRC_DIR)
 DEFS		+= -I$(SHARED_INC_DIR)
 
 ###############################################################################
@@ -57,8 +58,8 @@ CSTD		?= -std=c99
 ###############################################################################
 # Source files
 
-OBJS		+= $(SRC_DIR)/firmware.o
-OBJS		+= $(SRC_DIR)/core/system.o
+OBJS		+= $(SRC_DIR)/main.o
+OBJS		+= $(SRC_DIR)/os_functions.o
 
 
 #OBJS		+= $(SRC_DIR)/$(BINARY).o
